@@ -1,0 +1,23 @@
+{
+  "name": "gpt_budgetizer",
+  "version": "1.0.0",
+  "description": "Accepts a transaction memo and a list of categories, and returns a the category the transaction applies to.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "openai",
+    "gpt-3",
+    "gpt-4",
+    "chatgpt",
+    "banking"
+  ],
+  "author": "Shane Larson",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "openai": "^3.2.1"
+  }
+}
