@@ -35,7 +35,7 @@ To use the API, send a `POST` request to the `/generate-budget-category` endpoin
 
 ### Request
 
-- `POST /generate-budget-category`
+- `POST /categorize`
 
 ```json
 {
