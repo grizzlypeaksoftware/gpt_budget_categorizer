@@ -2,7 +2,7 @@
 
 This is a Node.js Express API that uses the OpenAI API to generate a relevant budget category for a given transaction memo. The API accepts an array of budget categories and a transaction memo as input, and returns the relevant budget category as output. The API uses the GPT-3 language model from OpenAI to generate the relevant budget category.
 
-You can read through my article about this here: [Code Repo](https://www.grizzlypeaksoftware.com/articles?id=3ZBY4gcMsLB8JqCKLd5NwU)
+You can read through my article about this here: [GPT-4 Meets Finance: Automate Transaction Categorization with Express API](https://www.grizzlypeaksoftware.com/articles?id=3ZBY4gcMsLB8JqCKLd5NwU)
 
 ## Prerequisites
 
