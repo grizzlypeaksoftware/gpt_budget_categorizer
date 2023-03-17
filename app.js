@@ -2,7 +2,6 @@ const express = require('express');
 const { Configuration, OpenAIApi } = require("openai");
 require('dotenv').config();
 const bodyParser = require('body-parser');
-
 const app = express();
 
 app.use(bodyParser.json());
@@ -14,7 +13,6 @@ const configuration = new Configuration({
 
 const openai_api = new OpenAIApi(configuration);
 
-// Define your API route
 app.post('/categorize', async (req, res) => {
 
   const categories = req.body.categories; // Get the budget categories array from the request body
@@ -30,14 +28,12 @@ app.post('/categorize', async (req, res) => {
   };
 
   // Call the OpenAI API to generate the relevant budget category for the transaction
-  const response = await openai_api.createCompletion(parameters);
+  const completion = await openai_api.createCompletion(parameters);
 
-  var unfilteredResponse = response.data.choices[0].text;
+  var unfilteredResponse = completion.data.choices[0].text;
   var category = "uncategorized";
 
   for(var i = 0; i < categories.length; i++){
-    console.log(categories[i])
-    console.log(unfilteredResponse);
     if (unfilteredResponse.includes(categories[i])) {
         category = categories[i];
     } 
